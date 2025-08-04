@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ronda RT 009 RW 007</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <div class="bg-container">
+    <div class="overlay">
+
+      <!-- ✅ Container 1: Area yang akan didownload sebagai gambar -->
+      <div id="captureArea" class="info-box with-bg">
+
+        <!-- ✅ Konten Petugas -->
+        <div class="info-content">
+          <h2 id="tanggal"></h2>
+          <h2 id="grup"></h2>
+          <p id="petugas"></p>
+        </div>
+      </div>
+
+      <!-- ✅ Container 2: Tombol & Caption -->
+      <div class="action-box">
+        <button id="downloadBtn">⬇️ Download Gambar</button>
+        <p id="statusDownload" style="text-align:center; font-size:14px; color:green;"></p>
+        <button id="copyBtn">📋 Copy Caption</button>
+        <textarea id="caption" readonly></textarea>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
