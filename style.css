@@ -117,7 +117,7 @@ body, html {
 /* Tombol Aksi */
 button {
   margin-top: 20px;
-  padding: 30px;
+  padding: 16px;
   font-size: 16px;
   border: none;
   border-radius: 10px;
@@ -160,33 +160,20 @@ textarea {
 @media (max-width: 400px) {
   .bg-container {
     padding: 12px;
-    gap: 40px;
+    gap: 60px;
   }
 
   .with-bg {
-    padding: 12px 16px;
-    min-height: 240px;
-  }
-
-  .title,
-  .judul-box h1 {
-    font-size: 22px;
-  }
-
-  #tanggal {
-    font-size: 16px;
+    padding: 16px 20px;
+    min-height: 280px;
   }
 
   #grup {
-    font-size: 24px;
-  }
-
-  #petugas {
-    font-size: 12px;
+    font-size: 60px; /* Kurangi sedikit agar tidak overflow */
   }
 
   button {
-    font-size: 15px;
-    padding: 12px;
+    padding: 16px;
+    font-size: 16px;
   }
 }
