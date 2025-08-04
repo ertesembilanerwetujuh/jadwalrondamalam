@@ -3,6 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  min-width: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f3f3f3;
   display: flex;
@@ -14,28 +15,28 @@ body, html {
 .bg-container {
   width: 100%;
   max-width: 500px;
-  margin: 10 auto;
-  padding: 8%;
+  margin: 0 auto;
+  padding: 16px;
   box-sizing: border-box;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
 /* Area dengan Gambar Background */
 .with-bg {
   position: relative;
-  padding: 5px 24px;
+  padding: 16px 20px;
   border-radius: 16px;
   color: white;
-  min-height: 300px;
+  min-height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #ffffff; /* Fallback background jika gambar gagal dimuat */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Gambar sebagai background absolute */
@@ -57,58 +58,56 @@ body, html {
 .info-content {
   position: relative;
   z-index: 1;
-  background-color: rgb(189, 0, 0); /* semi-transparan agar teks tetap terbaca */
+  background-color: rgba(189, 0, 0, 0.85);
   padding: 25px;
   border-radius: 12px;
   text-align: center;
   width: 100%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   backdrop-filter: blur(4px);
+  box-sizing: border-box;
 }
 
+/* Teks dalam Info */
 .info-content h1,
 .info-content h2,
 .info-content p {
   margin: 8px 0;
+  color: white;
 }
 
-/* Logo (jika digunakan di luar background absolute) */
-.bg-img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 16px;
-  filter: brightness(0.95);
-}
-
-/* Judul Ronda */
-.title {
+/* Judul */
+.title,
+.judul-box h1 {
   margin: 12px 0 16px;
   font-size: 26px;
   font-weight: 700;
   color: #d70000;
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 /* Teks Jadwal */
 #tanggal {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
-  margin: 8px 0 4px;
+  margin: 0px 0 4px;
 }
 
 #grup {
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0px 0;
 }
 
 #petugas {
-  font-size: 16px;
-  color: #ffb300;
-  margin-top: 10px;
+  font-size: 8px;
+  margin-top: 0px;
+  color: #d70000;
+  white-space: pre-wrap;
 }
 
-/* Kotak Aksi (Download, Copy, Caption) */
+/* Kotak Aksi */
 .action-box {
   display: flex;
   flex-direction: column;
@@ -117,8 +116,7 @@ body, html {
 
 /* Tombol Aksi */
 button {
-  margin-top: 20px; /* Tambahkan ini */
-  margin-bottom: 0px;   /* jarak dari bawah */
+  margin-top: 20px;
   padding: 14px;
   font-size: 16px;
   border: none;
@@ -150,3 +148,45 @@ textarea {
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Gambar Logo Tambahan */
+.bg-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 16px;
+  filter: brightness(0.95);
+}
+
+/* Responsive Mobile Adjustments */
+@media (max-width: 400px) {
+  .bg-container {
+    padding: 12px;
+    gap: 40px;
+  }
+
+  .with-bg {
+    padding: 12px 16px;
+    min-height: 240px;
+  }
+
+  .title,
+  .judul-box h1 {
+    font-size: 22px;
+  }
+
+  #tanggal {
+    font-size: 16px;
+  }
+
+  #grup {
+    font-size: 24px;
+  }
+
+  #petugas {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
